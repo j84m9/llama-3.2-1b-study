@@ -16,7 +16,7 @@ from utils.token_utils import Tokenizer, decoder
 st.title("⚡Llama Tokenizer Visualization⚡")
 
 # This updates every time a key is pressed
-user_text = st_keyup("Type here to see live updates:", key="01")
+user_text = st_keyup("Type here visualize tokenization:", key="01")
 
 # Segmented toggle between text and tokens
 view_mode = sac.segmented(
@@ -36,3 +36,12 @@ if user_text:
     else:
         st.write("### Live Tokens:")
         st.code(tokens)
+
+
+#Visualize some token count stats
+col1, col2, col3 = st.columns(3)
+col1.metric("Tokens", len(tokens))
+col2.metric("Characters", len(user_text))
+
+ratio = round(len(user_text) / len(tokens), 2) if len(tokens) > 0 else 0
+col3.metric("Chars/Token", ratio, delta="Avg", delta_color="normal")
