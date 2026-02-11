@@ -1,11 +1,16 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+
 #tokenizer
 from transformers import AutoTokenizer
 
 
 # Live Display
 class Tokenizer:
-    def __init__(self, path_ = "Llama-3.2-1B"):
-        self.path=path_
+    def __init__(self, path_ = None):
+        self.path=path_ or os.getenv("MODEL_PATH", "./Llama-3.2-1B")
 
     def instantiate(self):
         tokenizer = AutoTokenizer.from_pretrained(self.path)

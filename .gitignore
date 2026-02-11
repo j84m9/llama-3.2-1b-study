@@ -2,3 +2,4 @@ model.safetensors
 streamlit_app_eg.py
 *.ipynb
 __pycache__
+.env
