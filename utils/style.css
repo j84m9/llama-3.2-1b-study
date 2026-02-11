@@ -1,0 +1,23 @@
+.highlight {
+  border-radius: 0.4rem;
+  color: white;
+  padding: 0rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+.bold {
+  padding-left: 1rem;
+  font-weight: 700;
+}
+.blue {
+  background-color: #007bff;
+}
+.red {
+  background-color: #b71c1c;
+}
+.green {
+  background-color: #2ecc71;
+}
+.yellow {
+  background-color: #ffc107;
+}
