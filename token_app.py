@@ -24,19 +24,8 @@ view_mode = sac.segmented(
     radius='lg', color='blue'
 )
 
-
 tokenizer = Tokenizer().instantiate()
 tokens = tokenizer(user_text, return_tensors="pt")['input_ids'].flatten().tolist()[1:] #ignore the beginning of text token.
-
-if user_text:
-    if view_mode == 'Text':
-        st.write("### Current Text:")
-        decoded_text = decoder(tokens, tokenizer)
-        st.markdown(generate_annotated_html(decoded_text), unsafe_allow_html=True)
-    else:
-        st.write("### Live Tokens:")
-        st.code(tokens)
-
 
 #Visualize some token count stats
 col1, col2, col3 = st.columns(3)
@@ -45,3 +34,13 @@ col2.metric("Characters", len(user_text))
 
 ratio = round(len(user_text) / len(tokens), 2) if len(tokens) > 0 else 0
 col3.metric("Chars/Token", ratio, delta="Avg", delta_color="normal")
+
+#Visualization
+if user_text:
+    if view_mode == 'Text':
+        st.write("### Tokenized Text:")
+        decoded_text = decoder(tokens, tokenizer)
+        st.markdown(generate_annotated_html(decoded_text), unsafe_allow_html=True)
+    else:
+        st.write("### Tokens:")
+        st.code(tokens)
