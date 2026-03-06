@@ -1,0 +1,173 @@
+/* ── Activation Dashboard Dark Theme ─────────────────────────────────────── */
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #0e1117;
+}
+
+section[data-testid="stSidebar"] hr.sidebar-divider {
+    border: none;
+    border-top: 1px solid #1f2937;
+    margin: 1rem 0;
+}
+
+/* Sidebar logo / title area */
+.sidebar-logo {
+    padding: 0.25rem 0 0.5rem 0;
+}
+
+.sidebar-logo h2 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    color: #f1f5f9;
+    font-weight: 700;
+}
+
+.sidebar-logo .model-badge {
+    display: inline-block;
+    font-family: "SF Mono", "Fira Code", "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 2px 8px;
+    letter-spacing: 0.02em;
+}
+
+/* Token pills */
+.token-pill {
+    display: inline-block;
+    font-family: "SF Mono", "Fira Code", "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    padding: 2px 7px;
+    margin: 2px 1px;
+    border-radius: 4px;
+    line-height: 1.6;
+}
+
+.token-pill.blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.token-pill.violet {
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Prediction badge */
+.pred-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.pred-badge .pred-label {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.pred-badge .pred-token {
+    font-family: "SF Mono", "Fira Code", "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    background: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+.pred-badge .pred-prob {
+    font-family: "SF Mono", "Fira Code", "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: #4ade80;
+    font-weight: 600;
+}
+
+/* Metric cards */
+div[data-testid="stMetric"] {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+div[data-testid="stMetric"] label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: #64748b;
+}
+
+div[data-testid="stMetric"] [data-testid="stMetricValue"] {
+    color: #f1f5f9;
+    font-weight: 700;
+}
+
+/* Tab bar */
+div[data-testid="stTabs"] > div[role="tablist"] {
+    background: #0f172a;
+    border-radius: 8px 8px 0 0;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid #1f2937;
+}
+
+div[data-testid="stTabs"] button[role="tab"] {
+    color: #64748b;
+    font-weight: 500;
+    border-radius: 6px 6px 0 0;
+    padding: 0.5rem 1rem;
+}
+
+div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+    color: #60a5fa;
+    border-bottom: 2px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.08);
+}
+
+/* Chart cards */
+.chart-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.chart-card .chart-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* Captions under charts */
+div[data-testid="stCaptionContainer"] {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin-top: -0.25rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Info / warning boxes */
+div[data-testid="stAlert"] {
+    background: rgba(30, 58, 95, 0.35);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-left: 3px solid #3b82f6;
+    border-radius: 6px;
+    color: #cbd5e1;
+}
+
+/* Dataframe styling */
+div[data-testid="stDataFrame"] {
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    overflow: hidden;
+}

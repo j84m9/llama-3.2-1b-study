@@ -3,3 +3,6 @@ streamlit_app_eg.py
 *.ipynb
 __pycache__
 .env
+node_modules/
+viz-app/frontend/node_modules/
+viz-app/java-backend/target/
